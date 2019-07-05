@@ -13,7 +13,7 @@ class App extends Component {
         <Router>
           <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <a class="navbar-brand" href="www.google.com" target="_blank"></a>
+              <a className="navbar-brand" href="www.google.com" target="_blank"></a>
                 <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
               <Link to="/" className="navbar-brand">Todo Today (using MERN Stack)</Link>
               <div className="collpase navbar-collapse">
