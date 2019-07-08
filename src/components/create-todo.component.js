@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 export default class CreateTodo extends Component {
     constructor(props) {
@@ -46,14 +47,24 @@ export default class CreateTodo extends Component {
 
 
     onSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
 
         console.log(`
         Form submitted:\n
         Todo Description: ${this.state.todo_description}\n
         Todo Responsible: ${this.state.todo_responsible}\n
         Todo Priority: ${this.state.todo_priority}\n
-        `)
+        `);
+
+        const newTodo = {
+            todo_description: this.state.todo_description,
+            todo_responsible: this.state.todo_responsible,
+            todo_priority: this.state.todo_priority,
+            todo_completed: this.state.todo_completed,
+        };
+
+        axios.post('http://localhost:4000/todos/add', newTodo)
+            .then(res => console.log(res.data));
 
         this.resetState()
     }
