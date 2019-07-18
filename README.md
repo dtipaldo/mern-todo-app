@@ -1,3 +1,19 @@
+###To start the backend:
+
+Start Mongo: 
+`mongod --dbpath ~/workspace/mongodb_data`
+
+Start Server: `cd ~/workspace/mern-todo-app-backend`
+
+`nodemon server`
+
+###To start the frontend:
+
+`cd ~/workspace/mern-todo-app`
+
+`npm start`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
